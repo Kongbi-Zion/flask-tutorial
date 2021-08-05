@@ -1,0 +1,110 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git init
+Initialized empty Git repository in C:/Users/Zion/Desktop/HTML-GitHub-Heruko/.git/
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git add .
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git commt -m "Initial push"
+git: 'commt' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git commit -m "initial push"
+[master (root-commit) dfe6ba6] initial push
+ 1 file changed, 14 insertions(+)
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+
+    git push <name>
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git remote add origin https://github.com/Kongbi-Zion/html-github-heroku.git
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git remote -v
+origin  https://github.com/Kongbi-Zion/html-github-heroku.git (fetch)
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko>  git push --set-upstream origin master
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 446 bytes | 111.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Kongbi-Zion/html-github-heroku.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git branch
+* master
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git remote -v
+origin  https://github.com/Kongbi-Zion/html-github-heroku.git (fetch)
+origin  https://github.com/Kongbi-Zion/html-github-heroku.git (push)
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git branch -b changes
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --edit-description    edit the description for the branch
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git checkout -b changes
+Switched to a new branch 'changes'
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git add .
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git commit -m "added exclaimation"
+[changes bddf156] added exclaimation
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko> git push origin changes
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 146.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'changes' on GitHub by visiting:
+remote:      https://github.com/Kongbi-Zion/html-github-heroku/pull/new/changes
+remote:
+To https://github.com/Kongbi-Zion/html-github-heroku.git
+ * [new branch]      changes -> changes
+PS C:\Users\Zion\Desktop\HTML-GitHub-Heruko>
